@@ -1,0 +1,28 @@
+---
+type Props = {
+  index: number;
+  title: string;
+  subtitle: string;
+  image: string;
+  animation?: string;
+};
+
+const { index, title, subtitle, image, animation } = Astro.props;
+---
+
+<div
+  class="flex flex-col items-center text-center p-8 md:py-16 bg-[#161616] hover:cursor-pointer transition-all duration-700"
+  data-aos="fade-up"
+  data-aos-duration={`${200 * (index + 1)}`}
+>
+  <img
+    height={140}
+    width={140}
+    loading="lazy"
+    src={image}
+    alt={title}
+    data-aos="zoom-in"
+  />
+  <h4 class="text-[16px] md:text-[24px] font-bold my-4">{title}</h4>
+  <!-- <p class="text-[12px] md:text-[18px] text-gray">{subtitle}</p> -->
+</div>

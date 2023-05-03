@@ -1,0 +1,40 @@
+---
+import IconButton from "./Buttons/IconButton.astro";
+import { SiteText } from "../constants/texts";
+import logo from "/logo.svg";
+import google from "/google.svg";
+import linkedin from "/linkedin.svg";
+import twitter from "/twitter.svg";
+import facebook from "/facebook.svg";
+import Company from "./Footer/company.astro";
+import Impact from "./Footer/impact.astro";
+import Contact from "./Footer/contact.astro";
+---
+
+<footer class="flex flex-col lg:flex-row w-full">
+  <div class="flex-1">
+    <img src={logo} class="w-16" alt="logo" loading="lazy" />
+    <p class="text-gray my-4">{SiteText.footerDescription}</p>
+    <div class="w-full md:w-1/2 grid grid-cols-4 gap-3">
+      <IconButton type="big" className="black-gradient">
+        <img src={google} alt="google" />
+      </IconButton>
+      <IconButton type="big" className="black-gradient">
+        <img src={linkedin} alt="linkedin" />
+      </IconButton>
+      <IconButton type="big" className="black-gradient">
+        <img src={facebook} alt="facebook" />
+      </IconButton>
+      <IconButton type="big" className="black-gradient">
+        <img src={twitter} alt="twitter" />
+      </IconButton>
+    </div>
+  </div>
+  <div class="md:mx-16"></div>
+  <div class="my-4"></div>
+  <div class="md:flex-1 flex flex-col md:flex-row justify-between">
+    
+    <div class="my-4"></div>
+    <Contact />
+  </div>
+</footer>

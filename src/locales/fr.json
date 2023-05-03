@@ -1,0 +1,38 @@
+{
+  "header": {
+    "titleleftpart": "Orus Solutions est le",
+    "gradientpart": "partenaire de choix",
+    "titlerightpart": "des startups",
+    "subtitle": "Nous aidons les entreprises à augmenter leur valeur grâce au développement de logiciels personnalisés, à la conception de produits, à l'assurance qualité et aux services de conseil.",
+    "discoverbutton": "Decouvrir",
+    "ourservices": "Nos services"
+  },
+  "engagement": {
+    "opener": "Ce que vous pouvez attendre de nous",
+    "title": "Engagements",
+    "subtitle1": "Nous vous aidons à résoudre des problèmes commerciaux simples ou complexes avec des solutions technologiques. Ensemble, avec nos divers experts, nous aidons nos clients à surmonter les défis commerciaux grâce à des services d'ingénierie logicielle et de conseil personnalisés qui ajoutent une valeur tangible.",
+    "subtitle2": "Nous sommes passionnés par notre approche interfonctionnelle. Nous vous aidons à concevoir, tester, construire et livrer des produits – plus rapidement et à moindre coût. Les modèles de coopération Orus Solutions offrent de la flexibilité, ce qui nous permet d'adapter nos services à vos objectifs, vos ressources et votre calendrier. Nous sommes fiers de contribuer au succès des plus grandes marques mondiales.",
+    "cta": "Ça a l'air bien! Allons-y!"
+  },
+  "services": {
+    "opener": "Ce que nous pouvons faire pour vous",
+    "title": "Des services pour vous aider à avoir de meilleures produits",
+    "items": {
+      "web": "Application web",
+      "mobile": "Application mobile",
+      "automation": "Outils d'automatisation",
+      "graphic": "Conception graphique",
+      "ml": "Machine Learning",
+      "mlopener": "Traiter avec",
+      "mldescription": "Nous nous concentrons principalement sur la technologie qui compte et qui évolue. Nous croyons que l'apprentissage automatique est l'avenir du monde et nous sommes l'avenir de l'industrie technologique.",
+      "ar": "Realité augmentée",
+      "aropener": "Améliorez avec",
+      "ardescription": "Transformez vos idées en réalité et ayez un impact dans le monde. Avec le soutien de notre entreprise, vous passerez à un tout autre niveau !",
+      "vr": "Realité virtuelle",
+      "vropener": "Atteindre avec",
+      "vrdescription": "La réalité immersive est l'un des domaines avec lesquels nous aimons travailler. Nous pouvons vous aider à créer des expériences immersives pour vos utilisateurs, des jeux amusants aux expériences du monde réel.",
+      "gaming": "Gaming"
+    }
+  },
+  "common": {}
+}

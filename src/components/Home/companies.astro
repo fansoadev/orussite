@@ -1,0 +1,26 @@
+---
+import microsoft from "/microsoft-svgrepo-com.svg";
+import google from "/google-svgrepo-com.svg";
+import amazon from "/aws-svgrepo-com.svg";
+// import linkedin from "/linkedin-logo-svgrepo-com.svg";
+import apple from "/apple-11-logo-svgrepo-com.svg";
+import figma from "/figma-svgrepo-com.svg";
+import unity from "/unity-svgrepo-com.svg";
+import android from "/logos_android.svg";
+import tensorflow from "/tensorflow-svgrepo-com.svg";
+import metaIcon from "/simple-icons_meta.svg";
+
+const companies = [microsoft, google, unity, figma, amazon, android, metaIcon, apple, tensorflow];
+---
+
+<div class="flex justify-center w-full">
+  <ul class="flex gap-16">
+    {
+      companies.map((company, index) => (
+        <li data-aos="fade-up" data-aos-duration={`${index * 100 + 500}`}>
+          <img loading="lazy" src={company} alt={`image_${index}`} />
+        </li>
+      ))
+    }
+  </ul>
+</div>

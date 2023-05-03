@@ -1,0 +1,22 @@
+---
+import { SiteText } from "../../constants/texts";
+import { values } from "../../constants/values";
+import ValueItem from "../Value/valueItem.astro";
+---
+
+<div class="flex flex-col justify-center" id="our_values">
+  <h4
+    class="text-gradient text-[18px] uppercase font-bold text-center"
+    data-aos="fade-up"
+  >
+    - {SiteText.valueOpener} -
+  </h4>
+  <div class="mb-16" data-aos="fade-up" data-aos-duration="500">
+    <h2 class="text-[24px] md:text-[40px] font-bold text-center leading-tight">
+      {SiteText.valueTitle}
+    </h2>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-8 md:gap-y-16">
+    {values.map((value, index) => <ValueItem index={index} {...value} />)}
+  </div>
+</div>

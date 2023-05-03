@@ -1,0 +1,19 @@
+---
+import { persons } from "../../constants/persons";
+import { SiteText } from "../../constants/texts";
+import TeamItem from "../Team/teamItem.astro";
+---
+
+<div class="text-center" id="our_team">
+  <h4 class="text-gradient text-[18px] capitalize font-bold" data-aos="fade-up">
+    {SiteText.lorem}
+  </h4>
+  <div class="flex justify-center w-full mb-16">
+    <h2 class="text-[24px] md:text-[40px] font-bold md:w-1/2 leading-tight">
+      {SiteText.teamTitle}
+    </h2>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14">
+    {persons.map((person, index) => <TeamItem index={index} {...person} />)}
+  </div>
+</div>

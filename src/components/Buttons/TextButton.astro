@@ -1,0 +1,15 @@
+---
+type Props = {
+  className: string;
+  link?: string;
+};
+
+const { className, link = "#" } = Astro.props;
+---
+
+<a
+  href={link}
+  class={`font-bold text-[14px] md:text-[18px] ${className} transition-colors hover:text-gradient`}
+>
+  <slot />
+</a>

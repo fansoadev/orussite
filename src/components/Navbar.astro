@@ -1,0 +1,69 @@
+---
+import logo from "/logo.svg";
+import language from "/language.svg";
+import menu from "/menu.svg";
+import { languages } from "../constants/languages";
+import { menuItems } from "../constants/menus";
+import Icon from "astro-icon";
+
+let open = true;
+---
+
+<nav class="flex justify-between items-center">
+  <a href="#" class="w-1/4">
+    <img src={logo} alt="logo" loading="lazy" />
+  </a>
+  <div class="flex lg:hidden">
+    <a href="#">
+      <img src={language} alt="language" class="scale-150" />
+    </a>
+    <a href="#" class="ml-4">
+      <img src={menu} alt="menu" class="scale-150" />
+    </a>
+  </div>
+  <div class="hidden">
+    <ul class="flex h-screen flex-col top-0 right-0 fixed bg-white w-2/3 z-10">
+      {
+        menuItems.map((item) => (
+          <li class="text-white mx-4 text-4xl py-4 font-bold">
+            <a
+              class="text-black my-8"
+              href={`#${item.toLowerCase().replace(" ", "_")}`}
+            >
+              {item}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+
+  <div class="hidden lg:flex justify-between w-full">
+    <ul class="flex">
+      {
+        menuItems.map((item) => (
+          <li class="text-white mx-4">
+            <a href={`#${item.toLowerCase().replace(" ", "_")}`}>{item}</a>
+          </li>
+        ))
+      }
+    </ul>
+    <ul class="flex">
+      {
+        languages.map((language) => (
+          <li class={`text-white mx-2 text-[14px] flex flex-row items-start`}>
+            <a
+              href={`${language.route}`}
+              class={` ${
+                language.language.toUpperCase() === "en" && "font-bold"
+              } flex items-start`}
+            >
+              <Icon name={language.icon} class="w-4 mr-1" />
+              {language.language.toUpperCase()}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</nav>

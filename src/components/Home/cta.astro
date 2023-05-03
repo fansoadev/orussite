@@ -1,0 +1,65 @@
+---
+import { SiteText } from "../../constants/texts";
+import ElevatedButton from "../Buttons/ElevatedButton.astro";
+import star1 from "/star_1.svg";
+import star2 from "/star_2.svg";
+import { Icon } from "astro-icon";
+import Input from "../Forms/Input.astro";
+import Textarea from "../Forms/Textarea.astro";
+import Select from "../Forms/select.astro";
+import { industries } from "../../constants/industries";
+import { projects } from "../../constants/projects";
+---
+
+<div
+  class="rounded-xl flex flex-col items-center justify-center linear-gradient-background py-8 md:py-36"
+  id="contact_us"
+>
+  <div class="flex items-end justify-between w-1/2 mb-16 md:mb-4">
+    <img
+      loading="lazy"
+      data-aos="fade-up"
+      data-aos-duration="500"
+      src={star1}
+      alt="star1"
+      class="animate-pulse"
+    />
+    <img
+      loading="lazy"
+      data-aos="fade-up"
+      data-aos-duration="800"
+      src={star2}
+      alt="star2"
+      class="animate-pulse"
+    />
+  </div>
+  <h1
+    class="text-[20px] md:text-[32px] font-bold"
+    data-aos="fade-up"
+    data-aos-duration="500"
+  >
+    {SiteText.ctaTitle}
+  </h1>
+  <p
+    data-aos="zoom-in"
+    data-aos-duration="900"
+    class="text-[14px] text-center px-4 md:text-[18px] mb-4 md:mb-16"
+  >
+    {SiteText.contact}
+  </p>
+  <div class="flex flex-col w-full md:flex-row md:w-auto px-4">
+    <form class="grid grid-cols-2 gap-4">
+      <Input placeholder={SiteText.email}>
+        <Icon name="mdi:email-outline" class="w-5 ml-2" />
+      </Input>
+      <!-- <Select data={industries} />
+      <Select data={projects} />
+      <Textarea
+        className="ml-1"
+        icon={false}
+        placeholder={SiteText.description}
+      /> -->
+      <ElevatedButton className="w-full">{SiteText.subscribe}</ElevatedButton>
+    </form>
+  </div>
+</div>

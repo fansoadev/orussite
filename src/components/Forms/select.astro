@@ -1,0 +1,43 @@
+---
+type Option = {
+  label: string;
+  value: string;
+};
+
+type Props = {
+  name?: string;
+  icon?: boolean;
+  data?: Option[];
+  required?: boolean;
+};
+
+const {
+  name = "select",
+  icon = true,
+  data = [],
+  required = true,
+} = Astro.props;
+
+let isClicked = false;
+
+const activateDisabling = () => {
+  isClicked = true;
+};
+---
+
+<select
+  class="w-full bg-transparent input-border flex py-3 px-4 rounded-md"
+  name={name}
+  required={required}
+  onclick="activateDisabling()"
+>
+  {
+    data.map((item, index) => {
+      return (
+        <option disabled={index === 0} value={item.value} class="capitalize">
+          {item.label}
+        </option>
+      );
+    })
+  }
+</select>

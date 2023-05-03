@@ -1,0 +1,32 @@
+---
+import { SiteText } from "../../constants/texts";
+import phone from "/phone.png";
+import TextButton from "../Buttons/TextButton.astro";
+import { Icon } from "astro-icon";
+import { t } from "i18next";
+---
+
+<div class="flex flex-col md:flex-row" data-aos="fade-up">
+  <div class="flex-1 text-white">
+
+    <h4 class="uppercase text-gradient text-[18px] font-bold">
+      - {t("about.opener")} -
+    </h4>
+
+    <h1 class="text-[26px] lg:text-[40px] mt-2 font-bold">
+      {t("about.title")}
+    </h1>
+
+    <p class="mt-8 mb-4 text-gray">{t("about.subtitle1")}</p>
+
+    <TextButton link={"#contact_us"} className="mt-4 flex items-center">
+      {t("about.cta")}
+      <Icon name="mdi:arrow-right" class="w-5 ml-2" />
+    </TextButton>
+
+  </div>
+  
+  <div class="flex-1">
+    <img loading="lazy" src={phone} alt="phone" />
+  </div>
+</div>

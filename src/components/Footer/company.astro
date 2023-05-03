@@ -1,0 +1,16 @@
+---
+const companyItems = ["Missions", "Career", "Investors"];
+---
+
+<div class="flex flex-col">
+  <h3 class="font-bold text-[20px] md:text-[24px] mb-4">Company</h3>
+  <ul>
+    {
+      companyItems.map((item, index) => (
+        <li class="font-book">
+          <a href="#">{item}</a>
+        </li>
+      ))
+    }
+  </ul>
+</div>

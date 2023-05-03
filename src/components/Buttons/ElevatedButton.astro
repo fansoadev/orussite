@@ -1,0 +1,15 @@
+---
+type Props = {
+  className?: string;
+  link?: string;
+};
+
+const { className = "", link = "#" } = Astro.props;
+---
+
+<a
+  href={link}
+  class={`flex justify-center items-center px-8 h-[49px] font-bold rounded-md text-[14px] md:text-[18px] gradient-background ${className}`}
+>
+  <slot />
+</a>

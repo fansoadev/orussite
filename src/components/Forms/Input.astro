@@ -1,0 +1,21 @@
+---
+type Props = {
+  placeholder: string;
+  label?: string;
+  icon?: boolean;
+  required?: boolean;
+};
+
+const { placeholder, label, icon = true, required = true } = Astro.props;
+---
+
+<div class="input-border flex py-3 px-4 rounded-md items-center">
+  <slot />
+  <input
+    required={required}
+    class={`focus:outline-0 bg-transparent placeholder:text-white ${
+      icon ? "ml-4" : "ml-0"
+    }`}
+    placeholder={placeholder}
+  />
+</div>

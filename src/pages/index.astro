@@ -1,0 +1,31 @@
+---
+import { changeLanguage } from "i18next";
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Home/header.astro";
+import Companies from "../components/Home/companies.astro";
+import Engagements from "../components/Home/engagements.astro";
+import Services from "../components/Home/services.astro";
+import Detail from "../components/Home/detail.astro";
+import Values from "../components/Home/values.astro";
+import Cta from "../components/Home/cta.astro";
+import Team from "../components/Home/team.astro";
+import Start from "../components/Home/start.astro";
+import About from "../components/Home/about.astro";
+
+changeLanguage("en");
+---
+
+<Layout title="Orus Solutions">
+  <div class="grid grid-cols-1 gap-16">
+    <Header />
+    <Companies />
+    <Engagements />
+    <About />
+    <Services />
+    <Detail />
+    <Values />
+    <Cta />
+    <!-- <Team /> -->
+    <!-- <Start /> -->
+  </div>
+</Layout>

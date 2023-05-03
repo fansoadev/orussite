@@ -1,0 +1,44 @@
+{
+  "header": {
+    "titleleftpart": "We are ready to",
+    "gradientpart": "Get Started",
+    "titlerightpart": "Share your ideas with us",
+    "subtitle": "You have big ambitions for your business. We deliver the big results you need. Bring your idea to life in no time.",
+    "discoverbutton": "Discover",
+    "ourservices": "Our Services"
+  },
+  "engagement":{
+    "opener": "Why us",
+    "title": "Why work with us",
+    "subtitle1": "Trust our team that brings together the players in information technology to design the best systems for your business needs.",
+    "subtitle2": "We know that you need a team by your side to keep up with the changes and offer high quality services. We are here to grow your business.",
+    "cta": "Sounds good! Let's do it!"
+  },
+  "about": {
+    "opener": "About us",
+    "title": "Build life, Design future and Inspiring creativity",
+    "subtitle1": "Created in 2022, ORUS Solutions LLC specializes in computer science and engineering. Our goal is to help people and companies reach their full potential. At Orus Solutions LLC, we know that in order to achieve the best results, you need focused solutions and the right people to get the job done.",
+    "cta": "See more"
+  },
+  "services": {
+    "opener": "Solutions",
+    "title": "Services that lead the way to better business",
+    "items": {
+      "web": "Web application",
+      "mobile": "Mobile application",
+      "automation": "Internet of things",
+      "graphic": "UX & UI Design",
+      "ml": "Machine Learning",
+      "mlopener": "Process with",
+      "mldescription": "We are mainly focused on tech that matters and evolving. We believe that machine learning is the future of the world and we are the future of the tech industry.",
+      "ar": "Augmented Reality",
+      "aropener": "Enhance with",
+      "ardescription": "Turn your ideas into reality (mixed-reality) and make an impact in the world. With the support of our company, your business will rise to a whole new level!",
+      "vr": "Virtual Reality",
+      "vropener": "Reach with",
+      "vrdescription": "Immersive reality is one of the field we love to work with. We can help you to create immersive experiences for your users, from funny games to real world experiences.",
+      "gaming": "Gaming"
+    }
+  },
+  "common": {}
+}

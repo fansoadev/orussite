@@ -1,0 +1,24 @@
+---
+import { services } from "../../constants/services";
+import { SiteText } from "../../constants/texts";
+import ServiceItem from "../Services/serviceItem.astro";
+import { t } from "i18next";
+---
+
+<div class="text-center" id="our_services">
+  <h4 class="text-gradient text-[18px] uppercase font-bold">
+    - {t("services.opener")} -
+  </h4>
+  <div class="flex justify-center w-full mb-16">
+    <h2 class="text-[24px] lg:text-[40px] font-bold md:w-1/2 leading-tight">
+      {t("services.title")}
+    </h2>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    {
+      services.map((service, index) => (
+        <ServiceItem index={index} {...service} />
+      ))
+    }
+  </div>
+</div>

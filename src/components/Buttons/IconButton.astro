@@ -1,0 +1,22 @@
+---
+type Props = {
+  className?: string;
+  type?: string;
+};
+
+enum ButtonTypes {
+  BIG = "big",
+  NORMAL = "normal",
+}
+
+const { className, type } = Astro.props;
+---
+
+<button
+  aria-label="button"
+  class={`${
+    type === "big" ? "w-[56px] h-[56px]" : "w-[32px] h-[32px]"
+  } flex justify-center items-center rounded-lg ${className}`}
+>
+  <slot />
+</button>

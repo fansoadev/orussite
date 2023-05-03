@@ -1,0 +1,8 @@
+---
+import { details } from "../../constants/details";
+import DetailItem from "../Detail/detailItem.astro";
+---
+
+<div>
+  {details.map((detail, index) => <DetailItem index={index} {...detail} />)}
+</div>

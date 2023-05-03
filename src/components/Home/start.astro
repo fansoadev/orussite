@@ -1,0 +1,56 @@
+---
+import { SiteText } from "../../constants/texts";
+import engagement from "/engagement.webp";
+import TextButton from "../Buttons/TextButton.astro";
+import { Icon } from "astro-icon";
+---
+
+<div
+  class="flex flex-col-reverse md:flex-row p-8 rounded-lg z-10"
+  style={{
+    background: "rgba(22, 22, 22, 0.24)",
+  }}
+>
+  <div class="flex flex-1 flex-col justify-center">
+    <!-- <h4
+      class="text-gradient text-[14px] md:text-[18px] uppercase font-bold"
+      data-aos="fade-up"
+      data-aos-duration="500"
+    >
+      {SiteText.lorem}
+    </h4> -->
+    <h2
+      class="text-[20px] md:text-[40px] font-bold"
+      data-aos="fade-up"
+      data-aos-duration="700"
+    >
+      {SiteText.startTitle}
+    </h2>
+    <p class="my-8 text-gray" data-aos-duration="600" data-aos="zoom-in">
+      {SiteText.startDescription}
+    </p>
+    <TextButton className="flex items-center">
+      {SiteText.startButton}
+      <Icon name="mdi:arrow-right" class="w-5 ml-2" />
+    </TextButton>
+  </div>
+  <div class="flex-1 md:block">
+    <img
+      loading="lazy"
+      src={engagement}
+      alt="engagement"
+      data-aos="fade-down"
+      data-aos-duration="600"
+    />
+    <div
+      class="w-[250px] h-[250px] right-12 rounded-full absolute"
+      style={{
+        background:
+          "linear-gradient(85.21deg, #1E50FF -0.04%, #45389E 56.72%, #61285B 131.27%)",
+        filter: "blur(135px)",
+        marginTop: -120,
+      }}
+    >
+    </div>
+  </div>
+</div>

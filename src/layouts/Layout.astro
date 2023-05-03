@@ -1,0 +1,137 @@
+---
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
+import { Icon } from "astro-icon";
+import i18next, { t } from "i18next";
+
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+const scrollToTop = () => {
+  window.scrollTo(0, 0);
+};
+---
+
+<!DOCTYPE html>
+<html lang={i18next.language}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="Orus Solutions is the partner of choice of startups"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <style is:global>
+      html {
+        scroll-behavior: smooth;
+      }
+      @font-face {
+        font-family: "Gotham";
+        src: url("../fonts/Regular.woff");
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Gotham Bold";
+        src: url("../fonts/ExtraBold.woff");
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Gotham Medium";
+        src: url("../fonts/Medium.woff");
+        font-display: swap;
+      }
+
+      body {
+        font-family: "Gotham", sans-serif;
+      }
+
+      .font-bold {
+        font-family: "Gotham Bold";
+      }
+
+      .text-gradient {
+        background: linear-gradient(
+          85.12deg,
+          #61285b -33.54%,
+          #45389e 24.17%,
+          #1e50ff 99.96%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .gradient-background {
+        background: linear-gradient(
+          85.12deg,
+          #61285b -33.54%,
+          #45389e 24.17%,
+          #1e50ff 99.96%
+        );
+      }
+
+      .linear-gradient-background {
+        background: linear-gradient(
+          86.42deg,
+          #07123f -0.03%,
+          rgba(7, 18, 63, 0.5) 99.97%
+        );
+      }
+
+      .black-gradient {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.1) 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      }
+
+      .circle-decorator {
+        background: linear-gradient(
+          85.21deg,
+          #1e50ff -0.04%,
+          #45389e 56.72%,
+          #61285b 131.27%
+        );
+      }
+
+      .text-gray {
+        color: #c2c2c2;
+      }
+
+      .input-border {
+        border: 1px solid rgba(30, 80, 255, 0.1);
+      }
+
+      .font-book {
+        font-family: "Gotham Medium";
+      }
+    </style>
+  </head>
+  <body>
+    <main class="bg-black text-white min-h-screen py-12 px-8 md:px-24">
+      <Navbar />
+      <slot />
+      <div class="my-24"></div>
+      <Footer />
+      <a
+        href="#"
+        onclick="scrollToTop"
+        class="fixed right-8 bottom-8 animate-pulse"
+        ><Icon name="mdi:arrow-up" class="w-8 ml-2" />
+      </a>
+    </main>
+    <script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script is:inline>
+      AOS.init();
+    </script>
+  </body>
+</html>

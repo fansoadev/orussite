@@ -1,0 +1,47 @@
+---
+import { SiteText } from "../../constants/texts";
+
+type Props = {
+  index: number;
+  title: string;
+  description: string;
+  image: string;
+  opener: string;
+};
+
+const { index, title, description, image, opener } = Astro.props;
+---
+
+<div
+  class={`flex flex-col md:flex-row ${
+    index % 2 !== 0 && "md:flex-row-reverse"
+  } mb-8 md:mb-16`}
+>
+  <div class="flex-1" data-aos={`${index % 2 ? "flip-left" : "flip-right"}`}>
+    <img loading="lazy" alt={title} src={image} />
+  </div>
+  <div class="mx-8"></div>
+  <div class="flex flex-col flex-1 justify-center my-2">
+    <h4
+      class="text-gradient mt-2 md:mt-0 text-[14px] md:text-[18px] uppercase font-bold"
+      data-aos="fade-up"
+      data-aos-duration="500"
+    >
+      {opener}
+    </h4>
+    <h2
+      class="font-bold text-[26px] md:text-[40px]"
+      data-aos="fade-up"
+      data-aos-duration="700"
+    >
+      {title}
+    </h2>
+    <p
+      class="my-2 md:my-8 text-gray"
+      data-aos="fade-up"
+      data-aos-duration="750"
+    >
+      {description}
+    </p>
+  </div>
+</div>

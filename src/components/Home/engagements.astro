@@ -1,0 +1,30 @@
+---
+import { SiteText } from "../../constants/texts";
+import engagement from "/engagement.webp";
+import TextButton from "../Buttons/TextButton.astro";
+import { Icon } from "astro-icon";
+import { t } from "i18next";
+---
+
+<div class="flex flex-col md:flex-row" data-aos="fade-up">
+
+  <div class="flex-1">
+    <img loading="lazy" src={engagement} alt="engagement" />
+  </div>
+
+  <div class="flex-1 text-white">
+    <h4 class="uppercase text-gradient text-[18px] font-bold">
+      - {t("engagement.opener")} -
+    </h4>
+    <h1 class="text-[26px] lg:text-[40px] mt-2 font-bold">
+      {t("engagement.title")}
+    </h1>
+    <p class="mt-8 mb-4 text-gray">{t("engagement.subtitle1")}</p>
+    <p class="text-gray">{t("engagement.subtitle2")}</p>
+    <TextButton link={"#contact_us"} className="mt-4 flex items-center">
+      {t("engagement.cta")}
+      <Icon name="mdi:arrow-right" class="w-5 ml-2" />
+    </TextButton>
+  </div>
+  
+</div>

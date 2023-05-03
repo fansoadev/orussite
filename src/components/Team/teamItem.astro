@@ -1,0 +1,42 @@
+---
+import IconButton from "../Buttons/IconButton.astro";
+import { Icon } from "astro-icon";
+
+type Props = {
+  index: number;
+  firstname: string;
+  lastname: string;
+  position: string;
+  image: string;
+  description: string;
+  selected?: boolean;
+};
+
+const { index, firstname, lastname, position, image, description, selected } =
+  Astro.props;
+---
+
+<div
+  class="flex flex-col items-center px-8"
+  data-aos="fade-up"
+  data-aos-duration={`${500 * index}`}
+>
+  {/* <Image class="rounded-full w-40 h-40" src={image} alt={firstname} /> */}
+  <div class="w-32 h-32 rounded-full bg-blue-100 mb-4"></div>
+  <h3 class="font-bold text-[18px] my-2">
+    {firstname}
+    <br />
+    <span class="uppercase"> {lastname}</span>
+  </h3>
+  <h6 class="text-[14px] text-gray mb-4">{position}</h6>
+  <p class="text-center text-[14px]">{description}</p>
+  <div class="flex my-4">
+    <IconButton>
+      <Icon name="mdi:linkedin" class="w-5 ml-2" />
+    </IconButton>
+    <div class="mx-2"></div>
+    <IconButton>
+      <Icon name="mdi:twitter" class="w-5 ml-2" />
+    </IconButton>
+  </div>
+</div>
